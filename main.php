@@ -10,7 +10,7 @@ echo "\n\t\033[96m
                                                                  
                                                                  \033[0m\n";
 
-echo "WBGenerator V.1.0.0\n\n";
+echo "WBGenerator V 0.0\n\n";
 sleep(3);
 
 echo "[1]- Création des pages\n[2]- Templates\n[3]- Config\n[4]- Aide\n\n";
@@ -58,7 +58,7 @@ while ($choix < 1 || $choix > 4)
 		         echo "\nNom + extension de la page ".($i+1)." :";
 		         $tabPage[]=readline();
 
-		         echo "\n\t\033[93m La page ".$tabPage[$i]." a été créer !\033[0m\n";	         	
+		         echo "\n\t\033[93m La page ".$tabPage[$i]." a été créer !\033[0m\n";
 	         }
 
 		
@@ -90,3 +90,4 @@ while ($choix < 1 || $choix > 4)
 }
 
 ?>
+
