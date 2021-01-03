@@ -10,7 +10,30 @@ echo "\n\t\033[96m
                                                                  
                                                                  \033[0m\n";
 
+
 echo "WBGenerator V 0.0\n\n";
+
+
+echo "S;;t;t;t;t;t;t;t;t;t;t;t;t;t;t;t;t;t;t;%
+t......................................t
+t.           .t;;%8@88S::;.           :;
+t. .         :.--HEADER--.         . .t
+;:..:.:.:.:.:...:.:..:.....:.:.:.:.:..:;
+;:............:..........:............:;
+t. . . . . .     . .  .    .  . . .  ..t
+t.           .      .   .    .      . .;
+t:  .  .  .   . . ttt:.   .     .     :;
+t. .        .  %X%888%%St   .  .  .  ..t
+t.   .  . .    ;--BODY--: .        .  :;
+t:    .      .   .  .  .    . .  .    .t
+t. .    .  .      .     .       .   . :;
+t:. ... .. ...... . ... ....... . .. .:;
+;.::::::::::.::.::.::.:::.:::.::::::::.;
+t. .             ;%t%S;  .            :;
+t.         . :-.-FOOTER-.-.  .  .  .  :t
+t:;:;:;:;:;:::::::;::::::::;::;::;::;::t
+\n\n";
+
 sleep(3);
 
 echo "[1]- Création des pages\n[2]- Templates\n[3]- Config\n[4]- Aide\n\n";
@@ -35,10 +58,10 @@ switch ($choix)
 
 	         echo "\n[1]- \033[34m Bleu\033[0m\n[2]- \033[0m Noir\033[0m\n[3]- \033[33m Jaune\033[0m\n[4]- \033[31m Rouge\033[0m\n[5]- \033[32m Vert\033[0m\n[6]- \033[35m Magenta\033[0m\n[7]- \033[36m Cyan\033[0m\n[8]- \033[37m Gris clair\033[0m\n[9]- \033[90m Gris foncé\033[0m\n[10]-\033[91m Rouge clair\033[0m\n[11]-\033[92m Vert clair\033[0m\n[12]-\033[93m Jaune Clair\033[0m\n[13]-\033[94m Bleu clair\033[0m\n[14]-\033[95m Magenta clair\033[0m\n[15]-\033[96m Cyan clair\033[0m\n\n";
 
-while(empty($clPage)
+while(empty($clPage))
 	{
 
-	echo "\n Choisissez la couleur souhaitée pour les pages de votre site :";
+	echo "\nChoisissez la couleur souhaitée pour les pages de votre site :";
 	$clPage=readline();
 	}
 
@@ -48,8 +71,8 @@ while ($choix < 1 || $choix > 4)
 	$choix = readline("Choisir une option > ");
 }
 
-	         echo "\nFont police principale :";
-	         $fpPage=readline();
+	         /*echo "\nFont police principale :";
+	         $fpPage=readline();*/
 
 		     $tabPage=array();
 
