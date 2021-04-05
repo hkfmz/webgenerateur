@@ -1,4 +1,4 @@
 ## GENERATEUR DE SITE WEB
 
-> son site web sans taper de ligne de code.
+> Coder un en exemple un e-commerce ou autres en peu de temps.
 
