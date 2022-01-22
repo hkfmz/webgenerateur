@@ -70,7 +70,7 @@ while (empty($choix2) || $choix2 < 1 || $choix2 > 4)
 
 					echo "\n\033[32m1- Basics:\033[0m\n";
 					echo "\033[32m----------\033[0m\n";
-					echo "\t1- Mode libre\n\t2- Mode template\n";
+					echo "\t1- Mode libre\n\t2- Mode template\n\n";
 
 						//* Obligation au choix & option
 						while (empty($choix4) || $choix4 < 1 || $choix4 > 2)
@@ -83,11 +83,30 @@ while (empty($choix2) || $choix2 < 1 || $choix2 > 4)
 								case '1':
 									//* MODE LIBRE |||||||||||||||||||||||||||||||||||||
 
+									echo "\n\033[32m1- Mode libre:\033[0m\n";
+									echo "\033[32m--------------\033[0m\n";
+
+										//* Obligation à renseigner une valeur
+										while (empty($choix6))
+										{
+											print "\tRenseigner le nombre de page : ";
+											$choix6 = readline("");
+										}
+
 								break;
 
 								case '2':
 									//* MODE TEMPLATE ||||||||||||||||||||||||||||||||||
 
+									echo "\n\033[32m2- Mode template:\033[0m\n";
+									echo "\033[32m-----------------\033[0m\n";
+
+										//* Obligation à renseigner une valeur
+										while (empty($choix5))
+										{
+											print "\t\033[0;33mVeillez renseigner l`identifiant du template : \033[0m";
+											$choix5 = readline("");
+										}
 								break;
 
 							}
