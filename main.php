@@ -1,5 +1,4 @@
 <?php
-
 include 'includes.php';
 
 echo "\n\t\033[32m
@@ -14,125 +13,127 @@ echo "\n\t\033[32m
 
 echo "WBGenerator V 1.0\n\n";
 
-sleep(2);
+// sleep(2);
 
 //* Affichage du menu principal
-echo "MENU:\n";
+echo "\033[32mMENU:\033[0m\n";
 echo "
-[1]- Création des pages\n
-[2]- Templates\n
-[3]- Config\n
+[1]- Créations\n
+[2]- Historiques\n
+[3]- Paramètres\n
 [4]- Aide\n\n";
 
-//* Obligation au choix
-while(empty($choix))
+//* Obligation au choix & option
+while (empty($choix) || $choix < 1 || $choix > 4)
 {
-	$choix = readline("Choisir une option > ");
-}
-
-//* Obligation au bon choix d'option
-while ($choix < 1 || $choix > 4)
-{
-	echo "vous devez choisir entre 1 et 4\n\n";
-	$choix = readline("Choisir une option > ");
+	$choix = readline("Choississez une option > ");
 }
 
 //* Switch de lancement au choix
 switch ($choix)
 {
-	case '1':
+case '1':
+//* CREATION ---------------------------------------------------------------
+echo "\n\033[32m[1]- Créations:\033[0m\n";
+echo "\033[32m---------------\033[0m
+\t1- Application web statique\n
+\t2- Application web dynamique\n
+\t3- Application mobile\n
+\t4- Application desktop\n\n";
 
-		//* Recuperation du nombre de pages pour itération
-		echo "\nNombre de page :";
-		$nbPage=readline();
-
-		//* Tant que le nombre de page n'est pas précisé obliger le choix
-		while ($nbPage < 1 || !is_numeric($nbPage)){
-			echo "vous devez choisir un nombre de page\n\n";
-			$nbPage = readline("Nombre de page > ");
-		}
-
-// $tabPage=array();
-//* Génération de chaque pages
-for ($i=0; $i < $nbPage; $i++){
-	//* Le titre du site
-	echo "\nTitre sur la page d`accueil (page ".($i+1)."):";
-	$nomDePage=readline();
-
-	//* Nom du fichier
-	$page="index.html";
-
-				//* Ouverture et création des fichers
-				$myfile = fopen($page, "w");
-
-	//* entête
-	$entete = '
-	<!DOCTYPE HTML>
-	<html>
-	<head>
-	<title>'.$nomDePage.'</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-    </head>';
-
-				//* Ajout de l'entête & titre
-				fwrite($myfile, $entete);
-
-    //* Le Body
-	$myheader = theheader($nomDePage);
-	$body ='
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
-		'.$myheader;
-
-				//* Ajout du body, header et grand titre
-				fwrite($myfile, $body);
-
-	//*Le main
-    $mymain = themain();
-	$main = $mymain;
-
-    	    	//* Ajout du main
-				fwrite($myfile, $main);
-
-	//* Footer
-	$footer = thefooter().'</div>';
-
-                //* Ajout du footer
-				fwrite($myfile, $footer);
-
-	//* SCRIPTS
-	$scripts = thescripts().'</body>
-	</html>';
-
-                //* Ajout du script
-				fwrite($myfile, $scripts);
-
-	fclose($myfile);
-
-
-	echo "\n\t\033[32m La page ".$page."-".$i." a été créer !\033[0m\n";
+//* Obligation au choix & option
+while (empty($choix2) || $choix2 < 1 || $choix2 > 4)
+{
+	$choix2 = readline("Choississez une option > ");
 }
 
-		break;
+	switch ($choix2)
+		{
+			case '1':
+			//* APPLICATION WEB STATIQUE ##############################################
 
-		case '2':
+			echo "\n\033[32m1- Application web statique:\033[0m\n";
+			echo "\033[32m----------------------------\033[0m\n";
+			echo "\t1- Basics : [HTML / CSS / JavaScript]\n";
+			echo "\t2- Frameworks : [Bootstrap / React JS / Vue JS / Angular JS / Tailwind CSS]\n\n";
 
-			break;
+			//* Obligation au choix & option
+			while (empty($choix3) || $choix3 < 1 || $choix3 > 2)
+			{
+				$choix3 = readline("Choississez une option > ");
+			}
 
-			case '3':
+                switch($choix3)
+				{
+					case '1':
+						//* BASICS **************************************************
 
-				break;
+					echo "\n\033[32m1- Basics:\033[0m\n";
+					echo "\033[32m----------\033[0m\n";
+					echo "\t1- Mode libre\n\t2- Mode template\n";
 
-				case '4':
+						//* Obligation au choix & option
+						while (empty($choix4) || $choix4 < 1 || $choix4 > 2)
+						{
+							$choix4 = readline("Choississez une option > ");
+						}
+
+							switch($choix4)
+							{
+								case '1':
+									//* MODE LIBRE |||||||||||||||||||||||||||||||||||||
+
+								break;
+
+								case '2':
+									//* MODE TEMPLATE ||||||||||||||||||||||||||||||||||
+
+								break;
+
+							}
 
 					break;
 
-					default:
+					case '2':
+						//* FRAMEWORKS **********************************************
+
+					echo "\n\033[32m2- Frameworks:\033[0m\n";
+					echo "\033[32m--------------\033[0m\n";
+					echo "\t1- Bootstrap\n\t2- React JS\n\t3- Angular JS\n\t4- Tailwind CSS\n\t5- Vue JS\n";
 
 					break;
 				}
 
-				?>
+			break;
+		}
+
+break;
+
+case '2':
+	//* HISTORIQUES -------------------------------------------------------
+echo "\n\033[32m[2]- Historiques:\033[0m\n";
+echo "\033[32m---------------\033[0m";
+
+break;
+
+case '3':
+	//* PARAMÈTRES -------------------------------------------------------
+echo "\n\033[32m[3]- Paramètres:\033[0m\n";
+echo "\033[32m---------------\033[0m";
+
+break;
+
+case '4':
+	//* AIDES -----------------------------------------------------------
+echo "\n\033[32m[4]- Aide:\033[0m\n";
+echo "\033[32m---------------\033[0m";
+
+break;
+
+default:
+
+break;
+}
+
+?>
 

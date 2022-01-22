@@ -381,7 +381,7 @@ function thefooter(){
             </div>
         </div>
     </div>
-</section>';
+    </section>';
 
     return $myfooter;
 }
