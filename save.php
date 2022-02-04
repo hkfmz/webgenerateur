@@ -1,6 +1,5 @@
 <?php
 
-
 //* Recuperation du nombre de pages pour itération
 echo "\nNombre de page :";
 $nbPage=readline();
@@ -71,11 +70,10 @@ fwrite($myfile, $scripts);
 
 fclose($myfile);
 
-
 echo "\n\t\033[32m La page ".$page."-".$i." a été créer !\033[0m\n";
 }
 
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 class Color
 {
@@ -104,4 +102,13 @@ class Color
     const BG_MAGENTA = "\033[45m";
     const BG_CYAN = "\033[46m";
     const BG_LIGHT_GRAY = "\033[47m";
+}
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// * Obligation à renseigner une valeur
+while (empty($nombreDePage))
+{
+    print "\tRenseigner le nombre de page : ";
+    $nombreDePage = readline("");
 }
