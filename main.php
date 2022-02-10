@@ -62,7 +62,6 @@ switch ($choix)
 		{
 			$choix3 = readline("Choisissez une option > ");
 		}
-
 		switch($choix3)
 		{
 			case '1':
@@ -86,7 +85,7 @@ switch ($choix)
 				echo "\n\033[32m1- Mode libre:\033[0m\n";
 				echo "\033[32m--------------\033[0m\n";
 
-				echo "\t1- Site web d'une seule page\n\t2- Site web multi-pages\n\n";
+				echo "\t1- Single page\n\t2- Multi-pages\n\n";
 
 				// * Obligation au choix & option
 				while (empty($choix6) || $choix6 < 1 || $choix6 > 2)
@@ -99,7 +98,7 @@ switch ($choix)
 					echo "\033[32m-----\033[0m\n";
 
 					echo " Nous supposons qu`une page web est composée de 3 grandes parties:\n";
-					echo "- Le Header (l`entête),\n- Le Main (le principal),\n- le footer (le pied)\n\n\n";
+					echo "- Le Header (l`entête),\n- Le Main (le principal),\n- le Footer (le pied)\n\n\n";
 
 					echo "Commencer ? (y/n):";
 					$reponse = readline("");
